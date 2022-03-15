@@ -8,15 +8,18 @@ namespace assignment {
   // Task 1
   int squared_diff(int left, int right) {
 
-    // Write your code here ...
+    int x = left - right;
+    x = x*x;
 
-    return 0;
+    return x;
   }
 
   // Task 2
   bool check_bit(int mask, int bit_pos) {
 
-    // Write your code here ...
+
+
+
 
     return false;
   }
@@ -24,31 +27,65 @@ namespace assignment {
   // Task 3
   int max3(int left, int middle, int right) {
 
-    // Write your code here ...
+    int max = left;
 
-    return 0;
+    if(max <= middle){
+      max = middle;
+    }
+    if(max <= right){
+      max = right;
+    }
+
+    return max;
+
   }
 
   // Task 4
   void swap_args(int *left, int *right) {
 
-    // Write your code here ...
+    int c = *left;
+    *left = *right;
+    *right= c;
+    return;
   }
 
   // Task 5
   int arr_sum(int *arr, int length) {
 
-    // Write your code here ...
-
-    return 0;
+    if (length <= 0){
+      return 0;
+    }
+    else{
+      if(arr == nullptr){
+        return 0;
+      }
+      else{
+        int sum = 0;
+        for (int i = 0; i<length; i++){
+          sum += arr[i];
+        }
+        return sum;
+      }
+    }
   }
+
+
+
 
   // Task 6
   int *find_max_elem(int *arr, int length) {
 
-    // Write your code here ...
+    int maxi = 0;
 
-    return nullptr;
+    for (int i=0; i<length;++i) {
+
+      if (arr[maxi] < arr[i]) {
+        maxi = i;
+      }
+
+    }
+    return &arr[maxi];
+
   }
 
   // Task 7
